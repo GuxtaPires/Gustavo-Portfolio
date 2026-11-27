@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo Pires | Data & Tech</title>
+    <title>Gustavo Pires | Data & Analytics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-blue-50">
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800 antialiased">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50">
+    <nav class="fixed w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <a href="#hero" class="text-2xl font-bold text-blue-600 neon-text flex items-center">
+                <a href="#hero" class="text-2xl font-bold text-blue-600 neon-text flex items-center tracking-wider">
                     <span class="mr-2">GUS</span>
-                    <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
                 </a>
                 
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="text-gray-700 hover:text-blue-600 transition font-medium">.sobre()</a>
                     <a href="#skills" class="text-gray-700 hover:text-blue-600 transition font-medium">.skills()</a>
-                    <a href="#work" class="text-gray-700 hover:text-blue-600 transition font-medium">.experiência()</a>
+                    <a href="#work" class="text-gray-700 hover:text-blue-600 transition font-medium">.jornada()</a>
                     <a href="#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">.projetos()</a>
-                    <a href="#contact" class="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition">.contato()</a>
+                    <a href="#contact" class="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2.5 rounded-full hover:shadow-lg hover:scale-105 transition font-medium">.contato()</a>
                 </div>
                 
-                <button id="menu-btn" class="md:hidden text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <button id="menu-btn" aria-label="Abrir menu" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -35,68 +35,70 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-card w-full py-4 px-6 shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden glass-card w-full py-5 px-6 shadow-xl border-t border-white/40">
             <div class="flex flex-col space-y-4">
                 <a href="#about" class="text-gray-700 hover:text-blue-600 transition font-medium">.sobre()</a>
                 <a href="#skills" class="text-gray-700 hover:text-blue-600 transition font-medium">.skills()</a>
-                <a href="#work" class="text-gray-700 hover:text-blue-600 transition font-medium">.experiência()</a>
+                <a href="#work" class="text-gray-700 hover:text-blue-600 transition font-medium">.jornada()</a>
                 <a href="#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">.projetos()</a>
-                <a href="#contact" class="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2 rounded-full text-center hover:shadow-lg transition">.contato()</a>
+                <a href="#contact" class="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2.5 rounded-full text-center hover:shadow-lg transition font-medium">.contato()</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0">
-                    <div class="mb-2 flex items-center">
-                        <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+    <section id="hero" class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-3/5">
+                    <div class="mb-4 flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                         <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-xs font-mono text-gray-400 ml-2">~/gustavo-pires/portfolio</span>
                     </div>
                     
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
-                        <span class="text-gray-800">Olá, eu sou</span>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                        <span class="text-gray-800">Olá, eu sou </span>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Gustavo Pires</span>
                     </h1>
                     
-                    <h2 class="text-2xl md:text-3xl text-gray-600 mb-6 font-medium">
-                        <span class="text-blue-600">{"</span> Estudante de ADS <span class="text-blue-600">"}</span> 
-                        & 
-                        <span class="text-green-500">{"</span> Profissional de Dados <span class="text-green-500">"}</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-6 font-medium">
+                        <span class="text-blue-600 font-mono">{"</span> Data & Analytics <span class="text-blue-600 font-mono">"}</span> 
+                        <span class="mx-1 text-gray-400">&</span>
+                        <span class="text-green-600 font-mono">{"</span> Desenvolvedor ADS <span class="text-green-600 font-mono">"}</span>
                     </h2>
                     
-                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
-                        Transformando dados em insights e códigos em soluções impactantes.
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl leading-relaxed">
+                        Transformando dados brutos em inteligência estratégica com <strong>Python, SQL e Power BI</strong>, e construindo soluções tecnológicas orientadas a resultados.
                     </p>
                     
-                    <div class="flex space-x-4">
-                        <a href="#projects" class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-full hover:shadow-lg transition flex items-center">
-                            <i class="fas fa-code mr-2"></i> Ver Projetos
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-7 py-3.5 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition flex items-center font-medium">
+                            <i class="fas fa-chart-bar mr-2"></i> Ver Projetos
                         </a>
-                        <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-50 transition flex items-center">
-                            <i class="fas fa-paper-plane mr-2"></i> Fale Comigo
+                        <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" class="border-2 border-blue-600 text-blue-600 px-7 py-3.5 rounded-full hover:bg-blue-50 transition flex items-center font-medium">
+                            <i class="fab fa-github mr-2 text-lg"></i> GitHub
                         </a>
                     </div>
                 </div>
                 
-                <div class="md:w-1/2 flex justify-center relative">
+                <div class="md:w-2/5 flex justify-center relative">
                     <div class="relative">
-                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-                        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-                        <div class="absolute top-20 -right-10 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+                        <div class="absolute -top-6 -left-6 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-blob"></div>
+                        <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-blob animation-delay-2000"></div>
+                        <div class="absolute top-20 -right-10 w-36 h-36 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-blob animation-delay-4000"></div>
                         
-                        <div class="relative z-10 glass-card p-2 rounded-2xl shadow-xl">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
-                                 alt="Gustavo Pires" 
-                                 class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-xl border-4 border-white">
+                        <div class="relative z-10 glass-card p-3 rounded-2xl shadow-xl">
+                            <!-- Dica: substitua o src pelo caminho da sua foto local, ex: assets/foto-perfil.jpg -->
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=774&q=80" 
+                                 alt="Gustavo da Silva Pires" 
+                                 class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-xl border-4 border-white shadow-inner">
                         </div>
                         
-                        <div class="absolute -bottom-6 -right-6 bg-white p-3 rounded-full shadow-lg">
+                        <div class="absolute -bottom-5 -right-5 z-20 bg-white p-3 rounded-full shadow-lg">
                             <div class="hexagon w-12 h-12 bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center">
-                                <i class="fas fa-laptop-code text-white text-xl"></i>
+                                <i class="fas fa-database text-white text-lg"></i>
                             </div>
                         </div>
                     </div>
@@ -113,27 +115,26 @@
                     <span class="text-gray-800">Sobre </span>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Mim</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto"></div>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto rounded-full"></div>
             </div>
             
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-2/5 flex justify-center">
                     <div class="relative">
-                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl flex items-center justify-center shadow-lg">
-                            <i class="fas fa-user-tie text-6xl md:text-8xl text-blue-600 opacity-20"></i>
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl flex items-center justify-center shadow-lg border border-blue-50">
+                            <i class="fas fa-chart-network text-6xl md:text-8xl text-blue-600 opacity-25"></i>
+                            <i class="fas fa-code text-6xl md:text-7xl text-blue-600 opacity-30"></i>
                         </div>
-                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
-                            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg min-w-[220px]">
-                                <div class="flex items-center">
-                                    <div class="mr-3">
-                                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                                            <i class="fab fa-python text-green-600 text-xl"></i>
-                                        </div>
+                        <div class="absolute -bottom-6 -right-4 bg-white p-4 rounded-xl shadow-lg border border-gray-100 min-w-[220px]">
+                            <div class="flex items-center">
+                                <div class="mr-3">
+                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                        <i class="fab fa-python text-green-600 text-2xl"></i>
                                     </div>
-                                    <div>
-                                        <p class="text-sm font-medium">Movido a</p>
-                                        <p class="font-bold">Python e café</p>
-                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 font-medium uppercase tracking-wider">Movido a</p>
+                                    <p class="font-bold text-gray-800">Python, Dados & Café</p>
                                 </div>
                             </div>
                         </div>
@@ -142,64 +143,55 @@
                 
                 <div class="lg:w-3/5">
                     <div class="mb-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Quem sou eu?</h3>
-                        <p class="text-gray-600 mb-4">
-                            Sou um jovem profissional apaixonado por tecnologia, dados e inovação. Atualmente no 5º semestre de Análise e Desenvolvimento de Sistemas na FATEC Guarulhos, estou trilhando meu caminho para me tornar um especialista em Data & Analytics.
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Quem sou eu?</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Sou profissional da área de tecnologia e dados, graduado em <strong>Análise e Desenvolvimento de Sistemas pela FATEC Guarulhos</strong> e atuante na área de <strong>Data & Analytics no Santander</strong>, onde também integro a trilha de Ciência de Dados do programa <em>Data & AI League</em>.
                         </p>
-                        <p class="text-gray-600">
-                            Minha jornada começou na área de Logística, mas foi na tecnologia que encontrei minha verdadeira paixão. Acredito que dados bem interpretados podem transformar negócios e melhorar vidas.
+                        <p class="text-gray-600 leading-relaxed">
+                            Minha base técnica começou na Logística, o que me deu visão sistêmica de processos antes de mergulhar no universo de Engenharia, Análise e Ciência de Dados. Hoje foco em transformar bases complexas em indicadores claros e automações eficientes.
                         </p>
                     </div>
                     
                     <div class="mb-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Fora do trabalho</h3>
-                        <p class="text-gray-600 mb-4">
-                            Quando não estou codando ou analisando dados, você me encontra defendendo o gol em partidas de futebol (sim, sou goleiro!), tocando violão ou aproveitando momentos com minha namorada Beatriz e amigos.
-                        </p>
-                        <p class="text-gray-600">
-                            Sou um eterno aprendiz, curioso por natureza e sempre buscando novos desafios que me permitam crescer tanto profissional quanto pessoalmente.
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Fora do código</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Quando não estou modelando dados ou treinando modelos, você me encontra praticando musculação, participando de corridas de rua, acompanhando futebol no estádio ou aproveitando momentos ao lado da minha namorada, família e amigos.
                         </p>
                     </div>
                     
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-blue-500">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-blue-500 hover:shadow-sm transition">
                             <div class="flex items-center">
-                                <div class="mr-3">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-graduation-cap text-blue-600"></i>
-                                    </div>
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                    <i class="fas fa-graduation-cap text-blue-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium">Formação</p>
-                                    <p class="font-bold">ADS - FATEC</p>
+                                    <p class="text-xs text-gray-500 font-medium">Formação</p>
+                                    <p class="font-bold text-gray-800">ADS — FATEC</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-green-500">
+                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-green-500 hover:shadow-sm transition">
                             <div class="flex items-center">
-                                <div class="mr-3">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-briefcase text-green-600"></i>
-                                    </div>
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                    <i class="fas fa-briefcase text-green-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium">Atual</p>
-                                    <p class="font-bold">Santander</p>
+                                    <p class="text-xs text-gray-500 font-medium">Atuação</p>
+                                    <p class="font-bold text-gray-800">Santander</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-yellow-500">
+                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-yellow-500 hover:shadow-sm transition">
                             <div class="flex items-center">
-                                <div class="mr-3">
-                                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-futbol text-yellow-600"></i>
-                                    </div>
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                    <i class="fas fa-brain text-yellow-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium">Hobby</p>
-                                    <p class="font-bold">Goleiro</p>
+                                    <p class="text-xs text-gray-500 font-medium">Foco</p>
+                                    <p class="font-bold text-gray-800">Data & AI</p>
                                 </div>
                             </div>
                         </div>
@@ -217,81 +209,81 @@
                     <span class="text-gray-800">Minhas </span>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Habilidades</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto"></div>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto rounded-full"></div>
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Conhecimentos técnicos e conceituais que adquiri ao longo da minha jornada acadêmica e profissional.
+                    Stack principal de ferramentas, linguagens e metodologias que utilizo no dia a dia.
                 </p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
-                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition cursor-default flex flex-col items-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 transform rotate-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 transform rotate-6">
                         <i class="fab fa-python text-3xl text-blue-600"></i>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2 text-center">Python</h3>
-                    <p class="text-gray-600 text-sm text-center">Automações, análise de dados e scripts diversos</p>
-                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2">
-                        <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                    <h3 class="font-semibold text-lg mb-2 text-center">Python & Data</h3>
+                    <p class="text-gray-600 text-sm text-center">Pandas, NumPy, PySpark, ETL, EDA e automação de processos</p>
+                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                        <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
                     </div>
                 </div>
                 
-                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition cursor-default flex flex-col items-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 transform -rotate-6">
-                        <i class="fas fa-database text-3xl text-blue-600"></i>
+                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-4 transform -rotate-6">
+                        <i class="fas fa-database text-3xl text-indigo-600"></i>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2 text-center">SQL</h3>
-                    <p class="text-gray-600 text-sm text-center">Consultas complexas, otimização e modelagem</p>
-                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2">
-                        <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition cursor-default flex flex-col items-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-4 transform rotate-6">
-                        <i class="fas fa-chart-line text-3xl text-purple-600"></i>
-                    </div>
-                    <h3 class="font-semibold text-lg mb-2 text-center">Power BI</h3>
-                    <p class="text-gray-600 text-sm text-center">Dashboards e visualização de dados</p>
-                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2">
-                        <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                    <h3 class="font-semibold text-lg mb-2 text-center">SQL & Modelagem</h3>
+                    <p class="text-gray-600 text-sm text-center">Consultas analíticas, modelagem dimensional e bancos relacionais</p>
+                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                        <div class="bg-indigo-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
                     </div>
                 </div>
                 
-                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition cursor-default flex flex-col items-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-4 transform -rotate-12">
+                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-4 transform rotate-6">
+                        <i class="fas fa-chart-line text-3xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-center">Power BI & Visualização</h3>
+                    <p class="text-gray-600 text-sm text-center">Dashboards executivos, DAX, Streamlit, Plotly e Storytelling</p>
+                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                        <div class="bg-yellow-500 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bubble bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-4 transform -rotate-6">
                         <i class="fas fa-robot text-3xl text-green-600"></i>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2 text-center">Automação</h3>
-                    <p class="text-gray-600 text-sm text-center">RPA e scripts de automação</p>
-                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2">
-                        <div class="bg-green-600 h-2 rounded-full" style="width: 70%"></div>
+                    <h3 class="font-semibold text-lg mb-2 text-center">Ciência de Dados & IA</h3>
+                    <p class="text-gray-600 text-sm text-center">Estatística, Machine Learning (regressão, classificação e clustering)</p>
+                    <div class="mt-4 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                        <div class="bg-green-600 h-2 rounded-full skill-bar" style="width: 75%"></div>
                     </div>
                 </div>
             </div>
             
             <div class="bg-white rounded-xl shadow-sm p-8">
-                <h3 class="text-xl font-semibold mb-6 text-center">Outras Competências</h3>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <span class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-html5 text-orange-500 mr-2"></i> HTML5
+                <h3 class="text-xl font-semibold mb-6 text-center text-gray-800">Outras Competências & Ferramentas</h3>
+                <div class="flex flex-wrap justify-center gap-3 text-sm font-medium text-gray-700">
+                    <span class="bg-gray-100 hover:bg-blue-50 transition px-4 py-2 rounded-full flex items-center">
+                        <i class="fab fa-git-alt text-orange-600 mr-2"></i> Git & GitHub
                     </span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-css3-alt text-blue-500 mr-2"></i> CSS3
+                    <span class="bg-gray-100 hover:bg-blue-50 transition px-4 py-2 rounded-full flex items-center">
+                        <i class="fab fa-java text-red-500 mr-2"></i> Java / Android
                     </span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
+                    <span class="bg-gray-100 hover:bg-blue-50 transition px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-fire text-yellow-500 mr-2"></i> Firebase
+                    </span>
+                    <span class="bg-gray-100 hover:bg-blue-50 transition px-4 py-2 rounded-full flex items-center">
+                        <i class="fab fa-aws text-orange-500 mr-2"></i> Cloud (AWS)
+                    </span>
+                    <span class="bg-gray-100 hover:bg-blue-50 transition px-4 py-2 rounded-full flex items-center">
+                        <i class="fab fa-html5 text-orange-500 mr-2"></i> HTML5 & CSS3
+                    </span>
+                    <span class="bg-gray-100 hover:bg-blue-50 transition px-4 py-2 rounded-full flex items-center">
                         <i class="fab fa-js-square text-yellow-500 mr-2"></i> JavaScript
                     </span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fas fa-project-diagram text-purple-500 mr-2"></i> ITIL
-                    </span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fas fa-shield-alt text-blue-400 mr-2"></i> COBIT
-                    </span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fas fa-brain text-green-500 mr-2"></i> Lógica
-                    </span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fas fa-chart-pie text-red-500 mr-2"></i> Análise
+                    <span class="bg-gray-100 hover:bg-blue-50 transition px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-project-diagram text-purple-500 mr-2"></i> ITIL & COBIT
                     </span>
                 </div>
             </div>
@@ -306,97 +298,90 @@
                     <span class="text-gray-800">Minha </span>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Jornada</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto"></div>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto rounded-full"></div>
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Linha do tempo com minha trajetória profissional e acadêmica.
+                    Linha do tempo com minha evolução profissional e acadêmica.
                 </p>
             </div>
             
-            <div class="relative">
-                <!-- Vertical Timeline -->
-                <div class="space-y-8">
+            <div class="relative max-w-4xl mx-auto">
+                <div class="space-y-8 timeline-container">
                     <!-- Item 1 -->
                     <div class="timeline-item relative pl-12">
-                        <div class="timeline-dot absolute left-0 top-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center">
-                            <div class="w-4 h-4 rounded-full bg-white"></div>
+                        <div class="timeline-dot absolute left-0 top-1 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center shadow">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
                         </div>
-                        <div class="glass-card p-6 rounded-xl shadow-sm">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                                <h3 class="text-xl font-semibold flex items-center">
-                                    <img src="https://logo.clearbit.com/santander.com.br" alt="Santander" class="w-6 h-6 mr-2">
-                                    Santander
+                        <div class="glass-card p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
+                                <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                                    <i class="fas fa-university text-red-600 mr-2.5"></i>
+                                    Santander Brasil
                                 </h3>
-                                <span class="text-blue-600 font-medium bg-blue-100 px-3 py-1 rounded-full text-sm">2023 - Atual</span>
+                                <span class="text-blue-700 font-semibold bg-blue-100 px-3 py-1 rounded-full text-xs w-fit">Atual</span>
                             </div>
-                            <h4 class="text-gray-600 font-medium mb-3">Estagiário em Riscos Operacionais - Data & Analytics</h4>
-                            <p class="text-gray-600">
-                                Atuação na área de automação e análise de dados para gestão de riscos operacionais. Desenvolvimento de dashboards e automação de processos com Python e Power BI. Participação em projetos de transformação digital e melhoria de processos.
+                            <h4 class="text-blue-600 font-medium mb-3">Riscos Operacionais — Data & Analytics</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Atuação com análise de dados, indicadores e automação de processos para gestão de riscos operacionais utilizando Python, SQL e Power BI. Participante da trilha de Cientista de Dados no <strong>Data & AI League</strong>.
                             </p>
                         </div>
                     </div>
                     
                     <!-- Item 2 -->
                     <div class="timeline-item relative pl-12">
-                        <div class="timeline-dot absolute left-0 top-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center">
-                            <div class="w-4 h-4 rounded-full bg-white"></div>
+                        <div class="timeline-dot absolute left-0 top-1 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center shadow">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
                         </div>
-                        <div class="glass-card p-6 rounded-xl shadow-sm">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                                <h3 class="text-xl font-semibold flex items-center">
-                                    <img src="https://logo.clearbit.com/fatec.sp.gov.br" alt="FATEC" class="w-6 h-6 mr-2">
+                        <div class="glass-card p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
+                                <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                                    <i class="fas fa-graduation-cap text-green-600 mr-2.5"></i>
                                     FATEC Guarulhos
                                 </h3>
-                                <span class="text-green-600 font-medium bg-green-100 px-3 py-1 rounded-full text-sm">2021 - 2024</span>
+                                <span class="text-green-700 font-semibold bg-green-100 px-3 py-1 rounded-full text-xs w-fit">Graduação</span>
                             </div>
-                            <h4 class="text-gray-600 font-medium mb-3">Análise e Desenvolvimento de Sistemas</h4>
-                            <p class="text-gray-600">
-                                Graduação tecnológica com foco em desenvolvimento de software, banco de dados e análise de sistemas. 
-                                Disciplinas como: Estrutura de Dados, Engenharia de Software, Banco de Dados, Redes de Computadores. 
-                                TCC em desenvolvimento: aplicativo para descarte correto de medicamentos.
+                            <h4 class="text-green-600 font-medium mb-3">Tecnologia em Análise e Desenvolvimento de Sistemas</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Formação sólida em engenharia de software, estruturas de dados, banco de dados e desenvolvimento mobile. Desenvolvimento e apresentação do projeto <strong>Carson</strong> (aplicativo para descarte consciente de medicamentos) na SEMCITEC.
                             </p>
                         </div>
                     </div>
                     
                     <!-- Item 3 -->
                     <div class="timeline-item relative pl-12">
-                        <div class="timeline-dot absolute left-0 top-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center">
-                            <div class="w-4 h-4 rounded-full bg-white"></div>
+                        <div class="timeline-dot absolute left-0 top-1 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center shadow">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
                         </div>
-                        <div class="glass-card p-6 rounded-xl shadow-sm">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                                <h3 class="text-xl font-semibold flex items-center">
-                                    <img src="https://logo.clearbit.com/latam.com" alt="LATAM" class="w-6 h-6 mr-2">
+                        <div class="glass-card p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
+                                <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                                    <i class="fas fa-plane text-purple-600 mr-2.5"></i>
                                     LATAM Airlines
                                 </h3>
-                                <span class="text-purple-600 font-medium bg-purple-100 px-3 py-1 rounded-full text-sm">2020 - 2021</span>
+                                <span class="text-purple-700 font-semibold bg-purple-100 px-3 py-1 rounded-full text-xs w-fit">Experiência Anterior</span>
                             </div>
-                            <h4 class="text-gray-600 font-medium mb-3">Aprendiz em Saúde Ocupacional</h4>
-                            <p class="text-gray-600">
-                                Atuação na área de saúde ocupacional, com apoio na gestão de exames admissionais, periódicos e demissionais. 
-                                Primeira experiência corporativa que despertou interesse por dados e processos. 
-                                Participação em projetos de melhoria contínua e gestão documental.
+                            <h4 class="text-purple-600 font-medium mb-3">Jovem Aprendiz Administrativo</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Apoio operacional na gestão de controles administrativos e documentação corporativa, experiência que consolidou minha organização analítica e interesse por otimização de fluxos com tecnologia.
                             </p>
                         </div>
                     </div>
                     
                     <!-- Item 4 -->
                     <div class="timeline-item relative pl-12">
-                        <div class="timeline-dot absolute left-0 top-0 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center">
-                            <div class="w-4 h-4 rounded-full bg-white"></div>
+                        <div class="timeline-dot absolute left-0 top-1 w-6 h-6 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center shadow">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
                         </div>
-                        <div class="glass-card p-6 rounded-xl shadow-sm">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                                <h3 class="text-xl font-semibold flex items-center">
-                                    <img src="https://logo.clearbit.com/etec.sp.gov.br" alt="ETEC" class="w-6 h-6 mr-2">
+                        <div class="glass-card p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
+                                <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                                    <i class="fas fa-truck-loading text-yellow-600 mr-2.5"></i>
                                     ETEC Guarulhos
                                 </h3>
-                                <span class="text-yellow-600 font-medium bg-yellow-100 px-3 py-1 rounded-full text-sm">2018 - 2019</span>
+                                <span class="text-yellow-800 font-semibold bg-yellow-100 px-3 py-1 rounded-full text-xs w-fit">Ensino Técnico</span>
                             </div>
-                            <h4 class="text-gray-600 font-medium mb-3">Técnico em Logística</h4>
-                            <p class="text-gray-600">
-                                Formação técnica com enfoque em gestão de cadeia de suprimentos, processos logísticos e gestão de estoques. 
-                                Base para desenvolvimento de pensamento analítico e sistêmico. 
-                                Projeto final: sistema de controle de estoque usando Excel avançado.
+                            <h4 class="text-yellow-700 font-medium mb-3">Técnico em Logística</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Base analítica voltada para cadeia de suprimentos, indicadores de desempenho e controle de estoques estruturados com planilhas avançadas.
                             </p>
                         </div>
                     </div>
@@ -413,113 +398,127 @@
                     <span class="text-gray-800">Meus </span>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Projetos</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto"></div>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto rounded-full"></div>
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Alguns dos trabalhos que desenvolvi durante minha trajetória acadêmica e profissional.
+                    Soluções em Análise de Dados, Dashboards Interativos e Desenvolvimento de Software disponíveis no meu GitHub.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                <!-- Project 1: Brasileirão Analytics -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col">
                     <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1587854692152-e06df0c3564c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
-                             alt="EcoMed" 
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" 
+                             alt="Brasileirão Analytics" 
                              class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full">TCC</span>
+                            <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Data Analytics</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">EcoMed - Descarte Correto</h3>
-                        <p class="text-gray-600 mb-4">
-                            Aplicativo para facilitar o descarte correto de medicamentos vencidos. Conecta usuários a pontos de coleta e educa sobre os riscos do descarte inadequado.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Flutter</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Firebase</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">UI/UX</span>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">⚽ Brasileirão Analytics</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Pipeline completo de ETL, modelagem dimensional em Python e dashboard analítico no Power BI explorando dados históricos de partidas, gols, cartões e desempenho dos clubes.
+                            </p>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                                Detalhes <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                            </a>
-                            <a href="#" class="text-gray-500 hover:text-gray-700">
-                                <i class="fab fa-github"></i>
-                            </a>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full">Pandas</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Power BI</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded-full">DAX</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                                <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center">
+                                    Ver Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                                </a>
+                                <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" aria-label="GitHub Brasileirão Analytics" class="text-gray-500 hover:text-gray-800 text-lg">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                <!-- Project 2: Dashboard de Salários -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col">
                     <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                             alt="Dashboard Financeiro" 
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
+                             alt="Dashboard de Salários na Área de Dados" 
                              class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="bg-purple-600 text-white text-xs px-3 py-1 rounded-full">Profissional</span>
+                            <span class="bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Streamlit App</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Dashboard Financeiro</h3>
-                        <p class="text-gray-600 mb-4">
-                            Dashboard interativo para análise de indicadores financeiros desenvolvido com Power BI. Integração com múltiplas fontes de dados e atualização automática.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">DAX</span>
-                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">SQL</span>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">📊 Dashboard de Salários</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Aplicação web interativa para análise da remuneração global na área de dados, com filtros dinâmicos por senioridade, contrato, KPIs e mapa geográfico via Plotly.
+                            </p>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium flex items-center">
-                                Detalhes <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                            </a>
-                            <a href="#" class="text-gray-500 hover:text-gray-700">
-                                <i class="fas fa-lock"></i>
-                            </a>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full">Streamlit</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full">Plotly</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                                <a href="https://dashboard-salario-cientista-de-dados.streamlit.app/" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:text-red-800 font-semibold text-sm flex items-center">
+                                    Acessar App Online <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                                </a>
+                                <a href="https://github.com/GuxtaPires/Dashboard-Salario-Cientista-de-Dados" target="_blank" rel="noopener noreferrer" aria-label="GitHub Dashboard de Salários" class="text-gray-500 hover:text-gray-800 text-lg">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                <!-- Project 3: Carson App -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col">
                     <div class="relative h-48">
-                        <img src="https://images.unsplash.com/photo-1624953587687-daf255b6b80a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                             alt="Automação de Relatórios" 
+                        <img src="https://images.unsplash.com/photo-1587854692152-e06df0c3564c?auto=format&fit=crop&w=800&q=80" 
+                             alt="Carson - Descarte de Medicamentos" 
                              class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Mobile Android</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Automação de Relatórios</h3>
-                        <p class="text-gray-600 mb-4">
-                            Script Python para automação de geração e envio de relatórios operacionais. Redução de tempo de processamento de 4 horas para 15 minutos.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Python</span>
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Pandas</span>
-                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Automation</span>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">💊 Carson — Descarte Consciente</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Aplicativo Android desenvolvido em Java com Google Maps e Firebase para localizar pontos de coleta de medicamentos vencidos, gerenciar remédios e educar usuários.
+                            </p>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
-                                Detalhes <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                            </a>
-                            <a href="#" class="text-gray-500 hover:text-gray-700">
-                                <i class="fas fa-lock"></i>
-                            </a>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-5">
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full">Java</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">Android</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Firebase</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full">Maps API</span>
+                            </div>
+                            <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                                <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center">
+                                    Ver Código <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                                </a>
+                                <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" aria-label="GitHub Carson" class="text-gray-500 hover:text-gray-800 text-lg">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition">
-                    <i class="fab fa-github mr-2"></i> Ver mais no GitHub
+                <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-7 py-3.5 bg-white border border-gray-300 rounded-full text-gray-800 font-medium hover:bg-gray-100 hover:shadow transition">
+                    <i class="fab fa-github mr-2 text-lg"></i> Explorar todos os repositórios no GitHub
                 </a>
             </div>
         </div>
@@ -533,103 +532,102 @@
                     <span class="text-gray-800">Vamos </span>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">Conversar</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto"></div>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto rounded-full"></div>
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Estou sempre aberto a novas oportunidades, parcerias ou apenas um bom papo sobre tecnologia!
+                    Aberto a conexões, projetos em Dados & IA, oportunidades ou troca de ideias sobre tecnologia.
                 </p>
             </div>
             
             <div class="flex flex-col lg:flex-row gap-12">
                 <div class="lg:w-1/2">
-                    <form class="space-y-6">
+                    <form action="mailto:Gsdpires@gmail.com" method="post" enctype="text/plain" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                                <input type="text" id="name" name="Nome" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                             </div>
                             
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                                <input type="email" id="email" name="Email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                             </div>
                         </div>
                         
                         <div>
                             <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
-                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                            <input type="text" id="subject" name="Assunto" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
                         </div>
                         
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
+                            <textarea id="message" name="Mensagem" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition flex items-center justify-center">
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-3.5 rounded-lg hover:shadow-lg transition flex items-center justify-center font-medium">
                             <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
                         </button>
                     </form>
                 </div>
                 
                 <div class="lg:w-1/2">
-                    <div class="glass-card p-8 rounded-xl h-full">
-                        <h3 class="text-xl font-semibold mb-6">Outras Formas de Contato</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-xl mr-4">
-                                    <i class="fas fa-envelope text-blue-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">E-mail</h4>
-                                    <a href="mailto:gustavo.pires@exemplo.com" class="text-blue-600 hover:underline">gustavo.pires@exemplo.com</a>
-                                </div>
-                            </div>
+                    <div class="glass-card p-8 rounded-xl h-full border border-gray-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Canais Diretos</h3>
                             
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-xl mr-4">
-                                    <i class="fab fa-linkedin-in text-blue-600 text-xl"></i>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-xl mr-4 shrink-0">
+                                        <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">E-mail</h4>
+                                        <a href="mailto:Gsdpires@gmail.com" class="text-blue-600 hover:underline">Gsdpires@gmail.com</a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">LinkedIn</h4>
-                                    <a href="#" class="text-blue-600 hover:underline">linkedin.com/in/gustavopires</a>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-xl mr-4 shrink-0">
+                                        <i class="fab fa-linkedin-in text-blue-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">LinkedIn</h4>
+                                        <a href="https://www.linkedin.com/in/gustavodasilvapires/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">linkedin.com/in/gustavodasilvapires</a>
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-xl mr-4">
-                                    <i class="fab fa-github text-blue-600 text-xl"></i>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-xl mr-4 shrink-0">
+                                        <i class="fab fa-github text-blue-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">GitHub</h4>
+                                        <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">github.com/GuxtaPires</a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">GitHub</h4>
-                                    <a href="#" class="text-blue-600 hover:underline">github.com/gustavopires</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-xl mr-4">
-                                    <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Localização</h4>
-                                    <p class="text-gray-600">Guarulhos, São Paulo</p>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-xl mr-4 shrink-0">
+                                        <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Localização</h4>
+                                        <p class="text-gray-600">Guarulhos, São Paulo — Brasil</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="mt-12">
-                            <h4 class="font-medium text-gray-800 mb-4">Redes Sociais</h4>
+                        <div class="mt-10 pt-6 border-t border-gray-200/70">
+                            <h4 class="font-semibold text-gray-800 mb-4">Conecte-se</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
-                                    <i class="fab fa-twitter text-blue-600"></i>
+                                <a href="https://www.linkedin.com/in/gustavodasilvapires/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-11 h-11 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white text-blue-600 transition">
+                                    <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
-                                    <i class="fab fa-instagram text-blue-600"></i>
+                                <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-11 h-11 bg-blue-100 rounded-full flex items-center justify-center hover:bg-gray-900 hover:text-white text-blue-600 transition">
+                                    <i class="fab fa-github"></i>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
-                                    <i class="fab fa-facebook-f text-blue-600"></i>
-                                </a>
-                                <a href="#" class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
-                                    <i class="fab fa-whatsapp text-blue-600"></i>
+                                <a href="mailto:Gsdpires@gmail.com" aria-label="E-mail" class="w-11 h-11 bg-blue-100 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white text-blue-600 transition">
+                                    <i class="fas fa-envelope"></i>
                                 </a>
                             </div>
                         </div>
@@ -643,90 +641,77 @@
     <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <a href="#" class="text-2xl font-bold text-white flex items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <a href="#hero" class="text-2xl font-bold text-white inline-flex items-center">
                         <span class="mr-2">GP</span>
                         <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                     </a>
-                    <p class="text-gray-400 mt-2">Transformando dados em soluções impactantes</p>
+                    <p class="text-gray-400 mt-2 text-sm">Transformando dados em soluções impactantes</p>
                 </div>
                 
-                <div class="flex space-x-6 mb-6 md:mb-0">
+                <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0 text-sm">
                     <a href="#about" class="text-gray-400 hover:text-white transition">.sobre()</a>
                     <a href="#skills" class="text-gray-400 hover:text-white transition">.skills()</a>
-                    <a href="#work" class="text-gray-400 hover:text-white transition">.experiência()</a>
+                    <a href="#work" class="text-gray-400 hover:text-white transition">.jornada()</a>
                     <a href="#projects" class="text-gray-400 hover:text-white transition">.projetos()</a>
                     <a href="#contact" class="text-gray-400 hover:text-white transition">.contato()</a>
                 </div>
                 
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
+                <div class="flex space-x-5">
+                    <a href="https://www.linkedin.com/in/gustavodasilvapires/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-linkedin-in text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
+                    <a href="https://github.com/GuxtaPires" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter text-xl"></i>
+                    <a href="mailto:Gsdpires@gmail.com" aria-label="E-mail" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-envelope text-xl"></i>
                     </a>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center md:text-left">
-                <p class="text-gray-400">
-                    © 2023 Gustavo Pires. Todos os direitos reservados.
+                <p class="text-gray-400 text-sm">
+                    © 2026 Gustavo da Silva Pires. Todos os direitos reservados.
                     <span class="hidden md:inline-block mx-2">•</span>
-                    <span class="block md:inline-block mt-2 md:mt-0">Desenvolvido com <i class="fas fa-heart text-red-400 mx-1"></i> e muito café</span>
+                    <span class="block md:inline-block mt-2 md:mt-0">Desenvolvido com <i class="fas fa-heart text-red-400 mx-1"></i>, Python e café</span>
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Toggle do menu mobile
         document.getElementById('menu-btn').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
 
-        // Smooth scrolling for anchor links
+        // Smooth scrolling com compensação da navbar fixa
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    mobileMenu.classList.add('hidden');
-                    
-                    // Scroll to target
+                    e.preventDefault();
+                    document.getElementById('mobile-menu').classList.add('hidden');
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Add shadow to navbar on scroll
+        // Efeito glassmorphism na navbar ao rolar a página
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             if (window.scrollY > 10) {
-                nav.classList.add('shadow-md');
-                nav.classList.add('bg-white');
-                nav.classList.add('bg-opacity-90');
-                nav.classList.add('backdrop-filter');
-                nav.classList.add('backdrop-blur-sm');
+                nav.classList.add('shadow-md', 'bg-white/90', 'backdrop-blur-md');
             } else {
-                nav.classList.remove('shadow-md');
-                nav.classList.remove('bg-white');
-                nav.classList.remove('bg-opacity-90');
-                nav.classList.remove('backdrop-filter');
-                nav.classList.remove('backdrop-blur-sm');
+                nav.classList.remove('shadow-md', 'bg-white/90', 'backdrop-blur-md');
             }
         });
     </script>
