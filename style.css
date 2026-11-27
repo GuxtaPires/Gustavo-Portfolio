@@ -1,0 +1,117 @@
+/* Importação de fonte moderna para combinar com a estética Tech/Data */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+    --primary-blue: #2563eb;
+    --primary-green: #10b981;
+    --glass-bg: rgba(255, 255, 255, 0.78);
+    --glass-border: rgba(255, 255, 255, 0.5);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Efeito Glassmorphism para cards e menu mobile */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+/* Brilho sutil na logo GUS */
+.neon-text {
+    text-shadow: 0 0 18px rgba(37, 99, 235, 0.25);
+}
+
+/* Ícone hexagonal decorativo no Hero */
+.hexagon {
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+/* Animação fluida dos blobs de fundo no Hero */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(25px, -35px) scale(1.08);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.94);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 8s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Efeito de flutuação suave nos cards de habilidades */
+.skill-bubble {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    border: 1px solid rgba(229, 231, 235, 0.7);
+}
+
+.skill-bubble:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+/* Linha vertical conectora da Timeline */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 28px;
+    bottom: -32px;
+    width: 2px;
+    background: linear-gradient(to bottom, #2563eb, #10b981);
+    opacity: 0.35;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.25);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #2563eb, #10b981);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+}
